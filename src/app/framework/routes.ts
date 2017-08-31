@@ -13,7 +13,7 @@ export const appRoutes: Routes = [
     component: DemoComponent
   },
   {
-    path: 'routed',
+    path: 'routed/:param',
     component: RoutedComponent
   }
 ]
