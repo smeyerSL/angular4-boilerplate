@@ -8,22 +8,7 @@ import {HttpClientModule, HttpClient} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {DemoComponent} from "./components/demo/demo.component";
 import {RoutedComponent} from "./components/routed/routed.component";
-
-const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: 'demo',
-    pathMatch: 'full'
-  },
-  {
-    path: 'demo',
-    component: DemoComponent
-  },
-  {
-    path: 'routed',
-    component: RoutedComponent
-  }
-]
+import {appRoutes} from "./framework/routes";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
