@@ -30,3 +30,8 @@ Define your routes in src/app/framework/routes.ts
 
 ## SSL
 For local development there is a self signed certificate in the src/ssl folder. For startup using the certificate run **npm run start**
+
+## Sass
+You CAN distribute you sass code to each and every component, but I recommend to keep your .scss files at the src/assets/sass folder. The **entrypoint.scss** is imported once in Angulars global stylesheet file and outgoing from the that entrypoint you can import all you .scss files. <br />
+If you want to use less or plain css, run **ng set defaults.styleExt (less|css|...)**. This tells the Angular CLI what to use. Change the existing file extensions and to be safe grep the code for **scss**, it may happen that some config file was not changed automatically.
+
