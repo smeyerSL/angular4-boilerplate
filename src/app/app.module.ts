@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {Routes, RouterModule} from "@angular/router";
+import {RouterModule} from "@angular/router";
 import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
 import {HttpClientModule, HttpClient} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
