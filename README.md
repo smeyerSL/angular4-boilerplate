@@ -49,3 +49,6 @@ If you want to use less or plain css, run **ng set defaults.styleExt (less|css|.
 A prebuilt version of modernizr is contained in **src/assets/js/modernizr.js**. Die configuration used can be found at **modernizr-config.json**.<br />
 If you want to change the modernizr settings then modify the modernizr.json file and then run **gulp (build-modernizer)**
 
+## Error pages
+There is a GenericErrorComponent which can be styled. It collects all kinds of errors coming in via a route. Use those routes to redirect in case of an error. The 404 route always hits. <br />
+Try it by visiting some random URL.

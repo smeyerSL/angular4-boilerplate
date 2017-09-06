@@ -1,0 +1,31 @@
+{
+  "demo": {
+    "title": "Übersetzter Demotitel auf schwarzem, Sass-gestyltem Hintergrund"
+  },
+  "errorPages": {
+    "defaultError": {
+      "title": "Hoppla!",
+      "message": "Das sollte nicht passieren!"
+    },
+    "pageNotFound": {
+      "title": "Seite nicht gefunden",
+      "message": "Seite nicht gefunden Nachricht."
+    },
+    "sessionExpired": {
+      "title": "Sitzung abgelaufen",
+      "message": "Sitzung abgelaufen Nachricht."
+    },
+    "permissionDenied": {
+      "title": "Zugriff verweigert",
+      "message": "Zugriff verweigert Nachricht."
+    },
+    "unauthorized": {
+      "title": "Nicht authorisiert",
+      "message": "Nicht authorisiert Nachricht."
+    },
+    "tokenInvalid": {
+      "title": "Token ungültig",
+      "message": "Token ungültig Nachricht."
+    }
+  }
+}

@@ -9,6 +9,7 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {DemoComponent} from "./components/demo/demo.component";
 import {RoutedComponent} from "./components/routed/routed.component";
 import {appRoutes} from "./framework/routes";
+import { GenericErrorComponent } from './components/generic-error/generic-error.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -18,7 +19,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     RoutedComponent,
-    DemoComponent
+    DemoComponent,
+    GenericErrorComponent
   ],
   imports: [
     BrowserModule,
