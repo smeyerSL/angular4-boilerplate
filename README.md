@@ -51,4 +51,5 @@ If you want to change the modernizr settings then modify the modernizr.json file
 
 ## Error pages
 There is a GenericErrorComponent which can be styled. It collects all kinds of errors coming in via a route. Use those routes to redirect in case of an error. The 404 route always hits. <br />
+Translations follow a naming pattern. When you add a new error create a new translation object in **errorPages** named after your errorType.<br />
 Try it by visiting some random URL.
