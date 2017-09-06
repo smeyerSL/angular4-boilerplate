@@ -7,6 +7,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Project was created with:
 * ng new angular4-boilerplate --style=scss
 
+## Dependencies
+* Install node and npm
+* npm install @angular/cli -g
+* npm install gulp -g
+
 ## Overview
 This boilerplate contains
 * routing
@@ -15,6 +20,8 @@ This boilerplate contains
 * sass
 * self signed certificate 
 * Bootstrap 3
+* modernizer
+* gulp
 
 Visit https://localhost:4200/demo to see the output of selected boilerplate features.
 
@@ -38,4 +45,7 @@ For local development there is a self signed certificate in the src/ssl folder. 
 You CAN distribute you sass code to each and every component, but I recommend to keep your .scss files at the src/assets/sass folder. The **entrypoint.scss** is imported once in Angulars global stylesheet file and outgoing from the that entrypoint you can import all you .scss files. <br />
 If you want to use less or plain css, run **ng set defaults.styleExt (less|css|...)**. This tells the Angular CLI what to use. Change the existing file extensions and to be safe grep the code for **scss**, it may happen that some config file was not changed automatically.
 
+## modernizr
+A prebuilt version of modernizr is contained in **src/assets/js/modernizr.js**. Die configuration used can be found at **modernizr-config.json**.<br />
+If you want to change the modernizr settings then modify the modernizr.json file and then run **gulp (build-modernizer)**
 
