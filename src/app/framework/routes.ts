@@ -2,49 +2,46 @@ import {Routes} from "@angular/router";
 import {DemoComponent} from "../components/demo/demo.component";
 import {RoutedComponent} from "../components/routed/routed.component";
 import {GenericErrorComponent} from '../components/generic-error/generic-error.component';
-import {
-  ERROR_PAGE_NOT_FOUND, ERROR_SESSION_EXPIRED, ERROR_PERMISSION_DENIED, ERROR_UNAUTHORIZED,
-  ERROR_TOKEN_INVALID
-} from './constants';
+import * as Constants from './constants';
 
 export const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'demo',
+    redirectTo: Constants.ROUTE_DEMO,
     pathMatch: 'full'
   },
   {
-    path: 'demo',
+    path: Constants.ROUTE_DEMO,
     component: DemoComponent
   },
   {
-    path: 'routed/:param',
+    path: Constants.ROUTE_ROUTED,
     component: RoutedComponent
   },
   //error routes
   {
-    path: '**',
+    path: Constants.ROUTE_PAGE_NOT_FOUND,
     component: GenericErrorComponent,
-    data: [{errorType: ERROR_PAGE_NOT_FOUND}]
+    data: [{errorType: Constants.ERROR_PAGE_NOT_FOUND}]
   },
   {
-    path: 'sessionExpired',
+    path: Constants.ROUTE_SESSION_EXPIRED,
     component: GenericErrorComponent,
-    data: [{errorType: ERROR_SESSION_EXPIRED}]
+    data: [{errorType: Constants.ERROR_SESSION_EXPIRED}]
   },
   {
-    path: 'permissionDenied',
+    path: Constants.ROUTE_PERMISSION_DENIED,
     component: GenericErrorComponent,
-    data: [{errorType: ERROR_PERMISSION_DENIED}]
+    data: [{errorType: Constants.ERROR_PERMISSION_DENIED}]
   },
   {
-    path: 'unauthorized',
+    path: Constants.ROUTE_UNAUTHORIZED,
     component: GenericErrorComponent,
-    data: [{errorType: ERROR_UNAUTHORIZED}]
+    data: [{errorType: Constants.ERROR_UNAUTHORIZED}]
   },
   {
-    path: 'tokenInvalid',
+    path: Constants.ROUTE_TOKEN_INVALID,
     component: GenericErrorComponent,
-    data: [{errorType: ERROR_TOKEN_INVALID}]
+    data: [{errorType: Constants.ERROR_TOKEN_INVALID}]
   }
 ]

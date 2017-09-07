@@ -16,10 +16,14 @@ export class AppComponent {
     this.translateService = translateService;
     this.translateService.setDefaultLang('en');
 
-    this.translateService.use('en');
+    let lang = localStorage.getItem('lang');
+    if (lang) {
+      this.translateService.use(lang);
+    }
   }
 
   switchLanguage(languageTag: string) {
+    localStorage.setItem('lang', languageTag);
     this.translateService.use(languageTag);
   }
 }
