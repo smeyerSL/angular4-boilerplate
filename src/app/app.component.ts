@@ -1,29 +1,25 @@
 import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {DemoComponent} from "./components/demo/demo.component";
+import {LanguageService} from './services/language/language.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['app.component.scss'],
-  entryComponents: [DemoComponent]
+  entryComponents: [DemoComponent],
+  providers: [LanguageService]
 })
 export class AppComponent {
 
-  translateService: TranslateService;
+  languageService: LanguageService;
 
-  constructor(translateService: TranslateService) {
-    this.translateService = translateService;
-    this.translateService.setDefaultLang('en');
-
-    let lang = localStorage.getItem('lang');
-    if (lang) {
-      this.translateService.use(lang);
-    }
+  constructor(languageService: LanguageService) {
+    this.languageService = languageService;
+    this.languageService.initLanguage();
   }
 
   switchLanguage(languageTag: string) {
-    localStorage.setItem('lang', languageTag);
-    this.translateService.use(languageTag);
+    this.languageService.switchLanguage(languageTag);
   }
 }

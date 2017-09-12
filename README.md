@@ -30,6 +30,9 @@ Additionally to the both predefined production and testing environments there ar
 You can activate the wanted environment by adding the --environment flag like this: <br /> 
 **ng (build|serve|b|s) --(env|environment)=(dev|int|stag|prod)**, dev is default.
  
+## Languages
+There is a LanguageService which initializes the language and the external TranslationService. Furthermore it provides a function you can where you can subscribe language changes and react accordingly in your components.
+ 
 ## Translations
 Bundle files live in src/assets/i18n/{languageTag}.json. Translations can be triggered with the translate pipe.<br />
 They take nested json, so its possible to navigate trough the keys with dots: {{ 'component.title' | translate }}<br />
