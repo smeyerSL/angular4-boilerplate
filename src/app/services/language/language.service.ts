@@ -23,16 +23,18 @@ export class LanguageService {
     this.subject.next();
   }
 
-  initLanguage() {
+  initLanguage(langFromWindowNavigator: string) {
     this.translateService.setDefaultLang('en');
     let lang = localStorage.getItem('lang');
     if (lang) {
       this.translateService.use(lang);
     } else {
-      let browserLang = window.navigator.language.substr(0, 2);
+      let browserLang = langFromWindowNavigator.substr(0, 2);
       if (this.availableLanguages.indexOf(browserLang) !== -1) {
         this.translateService.use(browserLang);
         localStorage.setItem('lang', browserLang);
+      } else {
+        localStorage.setItem('lang', 'en');
       }
     }
   }

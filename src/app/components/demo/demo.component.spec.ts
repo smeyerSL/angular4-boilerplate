@@ -4,6 +4,7 @@ import {HttpClientModule, HttpClient} from "@angular/common/http";
 
 import { DemoComponent } from './demo.component';
 import {HttpLoaderFactory} from "../../app.module";
+import {LanguageService} from '../../services/language/language.service';
 
 describe('DemoComponent', () => {
   let component: DemoComponent;
@@ -21,6 +22,9 @@ describe('DemoComponent', () => {
             deps: [HttpClient]
           }
         })
+      ],
+      providers: [
+        LanguageService
       ]
     })
     .compileComponents();

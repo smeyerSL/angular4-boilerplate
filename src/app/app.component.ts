@@ -16,7 +16,7 @@ export class AppComponent {
 
   constructor(languageService: LanguageService) {
     this.languageService = languageService;
-    this.languageService.initLanguage();
+    this.languageService.initLanguage(window.navigator.language);
   }
 
   switchLanguage(languageTag: string) {

@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GenericErrorComponent } from './generic-error.component';
+import {ActivatedRoute, RouterModule} from '@angular/router';
+import {RouterTestingModule} from '@angular/router/testing';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {HttpClient} from '@angular/common/http';
+import {HttpLoaderFactory} from '../../app.module';
+import {HttpModule} from '@angular/http';
 
 describe('GenericErrorComponent', () => {
   let component: GenericErrorComponent;
@@ -8,7 +14,12 @@ describe('GenericErrorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GenericErrorComponent ]
+      declarations: [ GenericErrorComponent ],
+      imports: [
+        RouterModule,
+        RouterTestingModule.withRoutes([]),
+        TranslateModule.forRoot()
+      ]
     })
     .compileComponents();
   }));
