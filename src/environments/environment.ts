@@ -1,4 +1,5 @@
 export const environment = {
   envName: 'dev',
-  production: false
+  production: false,
+  apiBaseUrl: 'https://localhost/rest/api'
 };

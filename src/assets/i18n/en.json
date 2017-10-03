@@ -2,6 +2,27 @@
   "demo": {
     "title": "Translated demo title on black sassy background"
   },
+  "pages": {
+    "sign-in": {
+      "loginhint": "Please sign in",
+      "error": {
+        "wrongCredentials": "The credentials are wrong"
+      }
+    }
+  },
+  "forms": {
+    "username": {
+      "label": "Username",
+      "error": "Please enter your username"
+    },
+    "password": {
+      "label": "Password",
+      "error": "Please enter your password"
+    },
+    "signIn": {
+      "label": "Sign in"
+    }
+  },
   "errorPages": {
     "defaultError": {
       "title": "Woops!",
@@ -26,6 +47,10 @@
     "tokenInvalid": {
       "title": "Token invalid",
       "message": "Token invalid message."
+    },
+    "apiNotAvailable": {
+      "title": "API not available",
+      "message": "The API is currently not available"
     }
   }
 }

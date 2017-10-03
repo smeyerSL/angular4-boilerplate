@@ -25,6 +25,11 @@ This boilerplate contains
 
 Visit https://localhost:4200/demo to see the output of selected boilerplate features.
 
+## Authentication
+Use the AuthenticationService and its utils to validate against a JWT API. There are interceptors that add headers to every request and check for authentication errors. There is also a ProtectedComponent superclass, that makes sure that the user is signed in before he can open it. <br />
+Test it out on https://localhost:4200/sign-in. <br />
+An example for the JWT API will follow soon.
+
 ## Environments
 Additionally to the both predefined production and testing environments there are two additional ones (.int for integration and .stag for staging) holding the specific config for those systems<br />
 You can activate the wanted environment by adding the --environment flag like this: <br /> 

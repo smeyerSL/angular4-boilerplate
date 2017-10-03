@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
-import {DemoComponent} from "./components/demo/demo.component";
+import {DemoComponent} from './components/demo/demo.component';
 import {LanguageService} from './services/language/language.service';
 
 @Component({
